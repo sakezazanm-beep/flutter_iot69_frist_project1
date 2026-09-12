@@ -11,104 +11,110 @@ class HomeUI extends StatelessWidget {
       body: Center(
         child: Column(
           children: [
-            SizedBox(
-              height: 120.0,
-            ),
+            const SizedBox(height: 80),
+
             Image.asset(
               'assets/images/img_dev1.png',
-              height: 250.5,
+              height: 180,
             ),
-            SizedBox(
-              height: 25.0,
-            ),
+
+            const SizedBox(height: 25),
+
             Image.asset(
               'assets/images/img_dev2.png',
-              height: 80.0,
+              height: 70,
             ),
-            SizedBox(
-              height: 25.0,
-            ),
+
+            const SizedBox(height: 20),
+
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
                   'SAU',
                   style: TextStyle(
-                    fontSize: 35.0,
+                    fontSize: 30,
                     fontWeight: FontWeight.bold,
                     color: Colors.red[800],
                   ),
                 ),
-                Text(
+                const Text(
                   'Developer',
                   style: TextStyle(
-                    fontSize: 35.0,
-                    color: const Color.fromARGB(255, 15, 214, 111),
+                    fontSize: 30,
+                    color: Color.fromARGB(255, 15, 214, 111),
                   ),
                 ),
               ],
             ),
-            SizedBox(
-              height: 25.0,
-            ),
+
+            const SizedBox(height: 20),
+
+            // Login
             ElevatedButton(
               onPressed: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => LoginUI(),
+                    builder: (context) => const LoginUI(),
                   ),
                 );
               },
-              child: Text(
+              style: ElevatedButton.styleFrom(
+                fixedSize: const Size(300, 55),
+                backgroundColor: const Color.fromARGB(255, 31, 36, 46),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8),
+                ),
+              ),
+              child: const Text(
                 'Login',
                 style: TextStyle(
                   color: Colors.white,
                 ),
               ),
-              style: ElevatedButton.styleFrom(
-                fixedSize: Size(380, 75),
-                backgroundColor: Colors.black,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadiusGeometry.circular(10.0)),
-              ),
             ),
-            SizedBox(
-              height: 15.0,
-            ),
+
+            const SizedBox(height: 12),
+
+            // Register
             OutlinedButton(
               onPressed: () {},
-              child: Text(
+              style: OutlinedButton.styleFrom(
+                fixedSize: const Size(300, 55),
+                backgroundColor: Colors.white,
+                side: const BorderSide(
+                  color: Colors.grey,
+                ),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8),
+                ),
+              ),
+              child: const Text(
                 'Register',
                 style: TextStyle(
                   color: Colors.black,
                 ),
               ),
-              style: OutlinedButton.styleFrom(
-                fixedSize: Size(380, 75),
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadiusGeometry.circular(10.0)),
-              ),
             ),
-            SizedBox(
-              height: 75.0,
-            ),
-            Text(
+
+            const SizedBox(height: 50),
+
+            const Text(
               'Created By phongsaphon jaideesakunee',
               style: TextStyle(
-                color: const Color.fromARGB(255, 165, 198, 18),
-                fontSize: 17,
-                fontWeight: FontWeight.bold,
+                fontSize: 12,
+                color: Color.fromARGB(255, 15, 214, 111),
               ),
             ),
-            Text(
+
+            const Text(
               'มหาวิทยาลัยเอเชียอาคเนย์',
               style: TextStyle(
-                color: const Color.fromARGB(255, 3, 239, 168),
-                fontSize: 17,
-                fontWeight: FontWeight.bold,
+                fontSize: 12,
+                color: Color.fromARGB(255, 15, 214, 111),
               ),
-            )
+            ),
           ],
         ),
       ),
